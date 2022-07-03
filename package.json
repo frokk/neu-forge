@@ -1,0 +1,32 @@
+{
+	"name": "neu-forge",
+	"version": "0.1.1",
+	"description": "A Tool for developing neutralinojs applications",
+	"main": "src/index.js",
+	"bin": {
+		"neu-forge": "bin/neu-forge.js"
+	},
+	"scripts": {
+		"test": "node bin/neu-forge.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pegvin/neu-forge.git"
+	},
+	"keywords": [
+		"forge",
+		"neutralinojs"
+	],
+	"author": "ADITYA MISHRA",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/pegvin/neu-forge/issues"
+	},
+	"homepage": "https://github.com/pegvin/neu-forge#readme",
+	"dependencies": {
+		"commander": "^9.3.0",
+		"fs-extra": "^10.1.0",
+		"inquirer": "^9.0.0",
+		"nanospinner": "^1.1.0"
+	}
+}
