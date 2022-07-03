@@ -1,0 +1,46 @@
+* {
+	margin: 0; padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+html, body {
+	color: #FFF;
+	background-color: #222;
+}
+
+#app {
+	position: absolute;
+	top: 40%; left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 800px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#app h1 {
+	font-size: 2rem;
+}
+
+#app > div {
+	margin-top: 10px;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+a {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #00aeff;
+	text-decoration: none;
+	transition: 0.1s all linear;
+}
+
+a:hover {
+	color: #54c9ff;
+}

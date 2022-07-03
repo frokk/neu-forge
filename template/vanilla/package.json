@@ -1,0 +1,11 @@
+{
+	"name": "vanilla-app",
+	"version": "0.0.0",
+	"description": "neutralinoJs vanilla template",
+	"scripts": {
+		"test": "neu run"
+	},
+	"devDependencies": {
+		"@neutralinojs/neu": "^9.3.1"
+	}
+}
