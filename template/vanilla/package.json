@@ -7,6 +7,6 @@
 		"build": "neu-forge build"
 	},
 	"devDependencies": {
-		"neu-forge": "^0.4.7"
+		"neu-forge": "^0.4.8"
 	}
 }
