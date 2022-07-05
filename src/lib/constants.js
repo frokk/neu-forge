@@ -17,7 +17,7 @@ module.exports = {
 		binaries: {
 			linux: {
 				x64: "neutralino-linux_x64",
-				armhf: "neutralino-linux_armhf",
+				// armhf: "neutralino-linux_armhf",
 				arm64: "neutralino-linux_arm64"
 			},
 			darwin: {
@@ -27,7 +27,11 @@ module.exports = {
 				x64: "neutralino-win_x64.exe"
 			}
 		},
-		dependencies: ["WebView2Loader.dll"]
+		dependencies: {
+			win32: {
+				x64: ["WebView2Loader.dll"]
+			}
+		}
 	},
 	misc: {
 		hotReloadPatchRegex: /(<script.*src=")(.*neutralino.js)(".*><\/script>)/g

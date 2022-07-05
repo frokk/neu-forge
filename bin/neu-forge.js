@@ -5,6 +5,7 @@ const program = new Command();
 const pkgJson = require('../package.json');
 const createProject = require('./commands/create.js');
 const startProject = require('./commands/start.js');
+const buildProject = require('./commands/build.js');
 
 program
 	.name(pkgJson.name)
@@ -24,6 +25,12 @@ program.command('start')
 	.option('--arch <arch>', 'Architecture CPU To Run the App (automatically detected)')
 	.action(function(options) {
 		startProject(options);
+	});
+
+program.command('build')
+	.description('Build your Neutralino App')
+	.action(function() {
+		buildProject()
 	});
 
 program.parse();
