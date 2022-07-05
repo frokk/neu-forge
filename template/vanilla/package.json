@@ -3,9 +3,9 @@
 	"version": "0.0.0",
 	"description": "neutralinoJs vanilla template",
 	"scripts": {
-		"test": "neu run"
+		"test": "neu-forge start"
 	},
 	"devDependencies": {
-		"@neutralinojs/neu": "^9.3.1"
+		"neu-forge": "^0.4.5"
 	}
 }

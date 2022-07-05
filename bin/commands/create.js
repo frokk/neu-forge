@@ -86,13 +86,13 @@ function getNeutralinoBinaries(dirPath) {
 	return new Promise(async function(resolve, reject) {
 		let spinner = createSpinner(`Getting Neutralinojs Binaries`).start();
 		try {
-			let child = spawn("npx", ["neu", "update"], { cwd: dirPath, shell: true })
+			let child = spawn("npx", ["neu-forge", "fetch"], { cwd: dirPath, shell: true })
 			child.on("close", function(code) {
 				if (code == 0) {
 					spinner.success();
 					resolve();
 				} else {
-					spinner.warn({ text: `Neu CLI Exited with non-zero exit code: ${code}`});
+					spinner.warn({ text: `Neu-Forge Exited with non-zero exit code: ${code}`});
 					resolve(code);
 				}
 			})
