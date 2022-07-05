@@ -20,7 +20,7 @@ function createAsar(dest) {
 			fs.mkdirSync(`.tmp`, { recursive: true });
 			Promise.all([
 					fse.copy(`./${resourcesDir}`, `.tmp/${resourcesDir}`, { overwrite: true }),
-					fse.copy(`${constants.files.configFile}`, `.tmp/${constants.files.configFile}`, { overwrite: true }),
+					fse.copy(`./${constants.files.configFile}`, `.tmp/${constants.files.configFile}`, { overwrite: true }),
 					fse.copy(`./${clientLibrary}`, `.tmp/${clientLibrary}`, { overwrite: true }),
 					fse.copy(`./${icon}`, `.tmp/${icon}`, { overwrite: true })
 				])
