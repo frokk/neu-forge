@@ -1,0 +1,19 @@
+{
+	"name": "docs",
+	"private": true,
+	"version": "0.0.1",
+	"description": "Documentation For Neu-Forge",
+	"scripts": {
+		"test": "mdbook serve",
+		"build": "mdbook build",
+		"clean": "mdbook clean"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pegvin/neu-forge.git"
+	},
+	"bugs": {
+		"url": "https://github.com/pegvin/neu-forge/issues"
+	},
+	"homepage": "https://github.com/pegvin/neu-forge#readme"
+}
