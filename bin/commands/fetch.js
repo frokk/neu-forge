@@ -9,7 +9,7 @@ const constants = require('../../src/lib/constants.js');
 const config = require('../../src/lib/config.js');
 const configObj = config.get();
 
-const tempDir = fs.mkdtempSync('.tmp-');
+var tempDir = '';
 
 function downloadBinaries() {
 	return new Promise(async function(resolve, reject) {
@@ -56,6 +56,7 @@ function removeTemp() {
 }
 
 function fetch() {
+	tempDir = fs.mkdtempSync('.tmp-');
 	let spinner = createSpinner('Downloading binaries & client file').start();
 	try {
 		Promise.all([ downloadClient(), downloadBinaries() ])
