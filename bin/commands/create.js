@@ -116,6 +116,11 @@ async function updateSettings(projectName, version, dirPath) {
 				neuJson.applicationId = `js.neutralino.${projectName}`;
 
 				fse.writeJson(neuConfigJson, neuJson, { spaces: '\t' }, function(err) {
+					if (err) {
+						spinner.error();
+						reject(err);
+						return;
+					}
 					spinner.success();
 
 					const packageJson = path.resolve(dirPath, `package.json`);
@@ -126,7 +131,14 @@ async function updateSettings(projectName, version, dirPath) {
 							pkgJson.version = version;
 							pkgJson.name = projectName;
 							fse.writeJson(packageJson, pkgJson, { spaces: '\t' }, function(err) {
+								if (err) {
+									spinner.error();
+									reject(err);
+									return;
+								}
+
 								spinner.success();
+								resolve();
 							});
 						});
 					}
@@ -151,9 +163,9 @@ async function create() {
 	const projectPath = path.resolve(`./${projectName}`);
 
 	await copyTemplate(template, projectPath);
+	await updateSettings(projectName, version, projectPath);
 	await installNpmModules(projectPath);
 	await getNeutralinoBinaries(projectPath);
-	await updateSettings(projectName, version, projectPath);
 }
 
 module.exports = create;
