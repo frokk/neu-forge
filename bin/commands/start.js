@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 const { createSpinner } = require('nanospinner');
-const config = require('../../src/config.js');
-const constants = require('../../src/constants.js');
-const websocket = require('../../src/websocket.js');
-const filewatcher = require('../../src/filewatcher.js');
+const config = require('../../src/lib/config.js');
+const constants = require('../../src/lib/constants.js');
+const websocket = require('../../src/lib/websocket.js');
+const filewatcher = require('../../src/lib/filewatcher.js');
 
 function getBinaryName(arch) {
 	let platform = process.platform;

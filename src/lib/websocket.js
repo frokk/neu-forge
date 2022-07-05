@@ -1,3 +1,5 @@
+// WebSocket For Dispatching Reload And Other Events.
+
 const fs = require('fs');
 const WS = require('websocket').w3cwebsocket;
 const { v4: uuidv4 } = require('uuid');

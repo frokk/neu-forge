@@ -1,3 +1,5 @@
+// FileWatcher Reloads The App When Detects Changes
+
 const fs = require('fs');
 const chokidar = require('chokidar');
 const websocket = require('./websocket.js');

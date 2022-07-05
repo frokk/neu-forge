@@ -1,3 +1,5 @@
+// For Reading & Modifying JSON
+
 const editJsonFile = require('edit-json-file');
 const constants = require('./constants');
 const CONFIG_FILE = constants.files.configFile;

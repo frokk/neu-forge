@@ -1,3 +1,4 @@
+// Constants.
 module.exports = {
 	remote: {
 		binaries: {

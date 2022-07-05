@@ -1,3 +1,5 @@
+// Simple Functions For Apply Hot Reloading
+
 const fs = require('fs');
 const recursive = require('recursive-readdir');
 const config = require('./config.js');
