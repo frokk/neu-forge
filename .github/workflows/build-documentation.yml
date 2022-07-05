@@ -16,7 +16,6 @@ jobs:
         with:
           mdbook-version: 'latest'
 
-      - name: Change Directory & Build
       - run: cd docs && mdbook build && cd ../
 
       - name: Deploy
