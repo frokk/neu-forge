@@ -1,11 +1,12 @@
 {
 	"name": "vanilla-app",
 	"version": "0.0.0",
-	"description": "neutralinoJs vanilla template",
+	"description": "neutralinojs vanilla template",
 	"scripts": {
-		"test": "neu-forge start"
+		"test": "neu-forge start",
+		"build": "neu-forge build"
 	},
 	"devDependencies": {
-		"neu-forge": "^0.4.5"
+		"neu-forge": "^0.4.7"
 	}
 }
