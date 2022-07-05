@@ -2,7 +2,6 @@ const fse = require("fs-extra");
 const fs = require("fs");
 const path = require("path");
 const asar = require("asar");
-const rimraf = require("rimraf");
 const { createSpinner } = require('nanospinner');
 
 const config = require('../../src/lib/config.js');
@@ -87,11 +86,21 @@ async function build() {
 		spinner.success();
 
 		spinner = createSpinner(`Cleaning`);
-		rimraf(".tmp", function() {
-			rimraf(asarPath, function() {
+		fse.remove(".tmp", err => {
+			if (err) {
+				spinner.error();
+				console.error(err);
+				return
+			}
+			fse.remove(asarPath, err => {
+				if (err) {
+					spinner.error();
+					console.error(err);
+					return
+				}
 				spinner.success();
 			})
-		});
+		})
 	} catch(err) {
 		console.error(err);
 	}
