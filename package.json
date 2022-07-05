@@ -1,6 +1,6 @@
 {
 	"name": "neu-forge",
-	"version": "0.1.1",
+	"version": "0.2.3",
 	"description": "A Tool for developing neutralinojs applications",
 	"main": "src/index.js",
 	"bin": {
@@ -24,9 +24,14 @@
 	},
 	"homepage": "https://github.com/pegvin/neu-forge#readme",
 	"dependencies": {
+		"chokidar": "^3.5.3",
 		"commander": "^9.3.0",
+		"edit-json-file": "^1.7.0",
 		"fs-extra": "^10.1.0",
 		"inquirer": "^9.0.0",
-		"nanospinner": "^1.1.0"
+		"nanospinner": "^1.1.0",
+		"recursive-readdir": "^2.2.2",
+		"uuid": "^8.3.2",
+		"websocket": "^1.0.34"
 	}
 }
