@@ -1,6 +1,6 @@
 {
 	"name": "neu-forge",
-	"version": "0.2.3",
+	"version": "0.3.3",
 	"description": "A Tool for developing neutralinojs applications",
 	"main": "src/index.js",
 	"bin": {
